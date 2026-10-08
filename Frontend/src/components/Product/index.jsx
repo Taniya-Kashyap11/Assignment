@@ -16,29 +16,8 @@ const Product = ({products}) => {
   currency: 'INR',
   name: "My Store",
   description: "Product Purchase",
-  order_id: order.id,        // Received from backend
+  order_id: order.id,        
 callback_url:'/api/v1/paymentVerification',
-  // Runs on successful payment
-//   handler: async function (response) {
-//     // Send response credentials to backend for verification
-//     const verifyRes = await fetch("http://localhost:5000/verify-payment", {
-//       method: "POST",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify({
-//         razorpay_order_id: response.razorpay_order_id,
-//         razorpay_payment_id: response.razorpay_payment_id,
-//         razorpay_signature: response.razorpay_signature,
-//       }),
-//     });
-
-    // const verifyData = await verifyRes.json();
-    // if (verifyData.success) {
-    //   alert("Payment Successful!");
-    // } else {
-    //   alert("Payment Verification Failed!");
-    // }
-//   },
-
   prefill: {
     name: "Taniya",
     email: "taniyaKashyap2005@gmail.com",
